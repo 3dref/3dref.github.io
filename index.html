@@ -24,10 +24,21 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    /* 优化按钮间距，适配移动端 */
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .link-block .button {
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
-
-
 
 <section class="hero">
   <div class="hero-body">
@@ -42,6 +53,7 @@
  
           <div class="column has-text-centered">
             <div class="publication-links">
+              <!-- arXiv Link -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2403.06538" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -50,14 +62,8 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
-                <a href="https://github.com/keunhong/3DRef" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span> -->
+              
+              <!-- Project Page Link -->
               <span class="link-block">
                 <a href="https://3dref.github.io" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -67,7 +73,20 @@
                 </a>
               </span>
 
-              <!-- Dataset Link. -->
+              <!-- 新增：种子文件下载按钮 -->
+              <span class="link-block">
+                <a href="./static/3DRef.terrent" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-magnet"></i>
+                  </span>
+                  <span>Download Torrent</span>
+                </a>
+              </span>
+
+              <!-- Dataset Links 分组 -->
+              <div class="is-size-6 has-text-weight-bold mt-4 mb-2">Dataset Downloads:</div>
+              
+              <!-- Data Seq1 -->
               <span class="link-block">
                 <a href="https://robotics.shanghaitech.edu.cn/static/datasets/3DRef/seq1.tar.bz2"
                   class="external-link button is-normal is-rounded is-dark">
@@ -77,6 +96,8 @@
                 <span>Data Seq1 (17GB)</span>
                 </a>
               </span>
+              
+              <!-- Data Seq2 -->
               <span class="link-block">
               <a href="https://robotics.shanghaitech.edu.cn/static/datasets/3DRef/seq2.tar.bz2"
                   class="external-link button is-normal is-rounded is-dark">
@@ -86,6 +107,8 @@
                 <span>Data Seq2 (21GB)</span>
                 </a>
               </span>
+              
+              <!-- Data Seq3 -->
               <span class="link-block">
                 <a href="https://robotics.shanghaitech.edu.cn/static/datasets/3DRef/seq3.tar.bz2"
                     class="external-link button is-normal is-rounded is-dark">
@@ -95,14 +118,16 @@
                   <span>Data Seq3 (42GB)</span>
                   </a>
               </span>
+              
+              <!-- RGB & Network Data -->
               <span class="link-block">
                 <a href="https://robotics.shanghaitech.edu.cn/static/datasets/3DRef/reflection.tar.bz2"
                     class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data RGB, Network and Scipts (26GB)</span>
-                  </a>
+                  <span>RGB, Network & Scripts (26GB)</span>
+                </a>
               </span>
             </div>
           </div>
